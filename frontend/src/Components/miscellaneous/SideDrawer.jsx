@@ -33,6 +33,7 @@ import { getSender } from "../../config/ChatLogic"
 import UserListItem from "../userAvatar/UserListItem"
 import { ChatState } from "../../Context/ChatProvider"
 import { BASE_URL } from "../../config"
+import MailIcon from "@mui/icons-material/Mail"
 
 function SideDrawer() {
   const [search, setSearch] = useState("")
@@ -155,11 +156,11 @@ function SideDrawer() {
         </Text>
         <div>
           <Menu>
-            <MenuButton p={1}>
-              <Badge badgeContent={notification.length} color="primary">
-                <BellIcon fontSize="2xl" m={1} />
-              </Badge>
-            </MenuButton>
+            {/* <MenuButton p={1}>
+                <Badge badgeContent={4} color="primary">
+                  <MailIcon color="action" />
+                </Badge>
+              </MenuButton> */}
             <MenuList pl={2}>
               {!notification.length && "No New Messages"}
               {notification.map((notif) => (
